@@ -1,4 +1,4 @@
-subprojects{
+subprojects {
 
     apply(plugin = "java")
 
@@ -9,9 +9,10 @@ subprojects{
         mavenCentral()
         mavenLocal()
         maven("https://repo.codemc.io/repository/nms/")
-                maven("https://oss.sonatype.org/content/repositories/snapshots")
-                maven("https://oss.sonatype.org/content/repositories/central")
-                maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        maven("https://oss.sonatype.org/content/repositories/snapshots")
+        maven("https://oss.sonatype.org/content/repositories/central")
+        maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        maven("https://repo.unnamed.team/repository/unnamed-public/")
     }
 
 }

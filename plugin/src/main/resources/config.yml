@@ -1,0 +1,44 @@
+#Database
+database:
+  ip: "localhost"
+  port: "3306"
+  username: "root"
+  password: ""
+  name: "test"
+#Settings for configuring the main menu
+menu:
+  title: "Titulo del menu"
+#Settings for skills
+  skills:
+    warrior:
+      icon: ""
+      position: 1
+      name-item: "Nombre del item"
+      lore:
+        - ""
+    wizard:
+      icon: ""
+      position: 2
+      name-item: "Nombre del item"
+      lore:
+        - ""
+    
+    homeless:
+      icon: ""
+      position: 3
+      name-item: "Nombre del item"
+      lore:
+        - ""
+    hunter:
+      icon: ""
+      position: 4
+      name-item: "Nombre del item"
+      lore:
+        - ""
+    shaman:
+      icon: ""
+      position: 5
+      name-item: "Nombre del item"
+      lore:
+        - ""
+    
