@@ -10,6 +10,7 @@ dependencies{
     compileOnly("org.projectlombok:lombok:1.18.24")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
     implementation(project(":api"))
+    implementation("mysql:mysql-connector-java:8.0.30")
 }
 
 bukkit {
