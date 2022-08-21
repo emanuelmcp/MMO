@@ -32,13 +32,16 @@ public class MainInventory implements InventoryCreator {
       
       Inventory mainInventory = Bukkit.createInventory(null, 9, title);
       
+      if(!config.contains("menu.skills")) {
+         return null;
+      }
+      
       for(String key : config.getConfigurationSection("menu.skills").getKeys(false)) {
          
-         ConfigurationSection section = config.getConfigurationSection(key + ".");
-         String name = section.getString("name-item");
-         List<String> lore = section.getStringList("lore");
-         int position = section.getInt("position");
-         String icon = section.getString("icon");
+         String name = config.getString("menu.skills." + key +".name-item");
+         List<String> lore = config.getStringList("menu.skills." + key +".lore");
+         int position = config.getInt("menu.skills." + key +".position");
+         String icon = config.getString("menu.skills." + key +".icon");
          
          ItemStack item = new ItemStack(Material.valueOf(icon));
          ItemMeta meta = item.getItemMeta();
