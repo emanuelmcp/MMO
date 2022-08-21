@@ -31,12 +31,13 @@ public class ClickInventoryListener implements Listener {
       String configTitle = ChatColor.stripColor(plugin.getConfig().getString("menu.title"));
       ItemStack item = event.getCurrentItem();
       InventoryType.SlotType slotType = event.getSlotType();
-      Material material = item.getType();
       
       if(item == null) {
          event.setCancelled(true);
          return;
       }
+   
+      Material material = item.getType();
       
       if(slotType == InventoryType.SlotType.OUTSIDE || material == Material.AIR) {
          event.setCancelled(true);
