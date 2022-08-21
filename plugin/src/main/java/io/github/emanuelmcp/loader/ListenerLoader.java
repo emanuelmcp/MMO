@@ -1,6 +1,7 @@
 package io.github.emanuelmcp.loader;
 
 import io.github.emanuelmcp.RpMmo;
+import io.github.emanuelmcp.listener.ClickInventoryListener;
 import io.github.emanuelmcp.listener.PlayerJoinListener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.event.Listener;
@@ -18,7 +19,7 @@ public class ListenerLoader implements Loader{
    
    @Override
    public void load() {
-      loadListeners(new PlayerJoinListener(plugin));
+      loadListeners(new PlayerJoinListener(plugin), new ClickInventoryListener(plugin));
    }
    
    private void loadListeners(Listener... listeners) {
