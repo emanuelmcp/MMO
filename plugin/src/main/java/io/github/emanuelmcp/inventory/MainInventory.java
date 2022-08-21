@@ -44,6 +44,7 @@ public class MainInventory implements InventoryCreator {
          String icon = config.getString("menu.skills." + key +".icon");
          
          ItemStack item = new ItemStack(Material.valueOf(icon));
+         
          ItemMeta meta = item.getItemMeta();
          meta.setDisplayName(ChatUtils.color(name));
          meta.setLore(ChatUtils.colorList(lore));
