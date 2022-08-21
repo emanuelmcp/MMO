@@ -2,6 +2,7 @@ package io.github.emanuelmcp.database;
 
 import io.github.emanuelmcp.RpMmo;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,7 +21,7 @@ public class MySQLDatabase implements Database {
     }
     
     @Override
-    public Connection getConnection() {
+    public @NotNull Connection getConnection() {
         return connection;
     }
 

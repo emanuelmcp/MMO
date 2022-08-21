@@ -16,5 +16,6 @@ dependencies{
 bukkit {
     main = "io.github.emanuelmcp.RpMmo"
     apiVersion = "1.19"
-    prefix = "TEST"
+    prefix = "RPMMO"
+    authors = listOf("ImEcuadorian", "")
 }

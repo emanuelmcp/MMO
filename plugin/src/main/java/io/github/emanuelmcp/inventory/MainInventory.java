@@ -9,6 +9,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class MainInventory implements InventoryCreator{
    }
    
    @Override
-   public Inventory createInventory() {
+   public @NotNull Inventory createInventory() {
    
       FileConfiguration config = plugin.getConfig();
       

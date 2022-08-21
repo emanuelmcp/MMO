@@ -1,7 +1,10 @@
 name: plugin
 version: 1.0.0
 main: io.github.emanuelmcp.RpMmo
-prefix: TEST
+authors:
+ - ImEcuadorian
+ - ""
+prefix: RPMMO
 libraries:
  - com.google.code.gson:gson:2.8.9
 api-version: 1.19

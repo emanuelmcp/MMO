@@ -6,8 +6,6 @@ import io.github.emanuelmcp.database.MySQLDatabase;
 import io.github.emanuelmcp.loader.ListenerLoader;
 import io.github.emanuelmcp.loader.Loader;
 
-import java.io.FileNotFoundException;
-import java.sql.SQLException;
 import java.util.Arrays;
 
 
@@ -24,6 +22,7 @@ public class MainService implements Service{
    
    @Override
    public void start() {
+      plugin.saveDefaultConfig();
       loadServices(new ListenerLoader(plugin));
    }
    
