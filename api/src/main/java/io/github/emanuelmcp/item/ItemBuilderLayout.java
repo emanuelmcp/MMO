@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 
 
-public abstract class ItemBuilderLayout<T extends ItemBuilder> implements ItemBuilder {
+abstract class ItemBuilderLayout<T extends ItemBuilder> implements ItemBuilder {
    
    protected final Material material;
    private final int amount;
@@ -96,18 +96,14 @@ public abstract class ItemBuilderLayout<T extends ItemBuilder> implements ItemBu
       meta.setDisplayName(name);
       meta.setLore(lore);
       
-      int currentVersion = ServerVersion.CURRENT.getMinor();
+      List<org.bukkit.inventory.ItemFlag> itemFlags = new ArrayList<>();
       
-      if(currentVersion != 7) {
-         List<org.bukkit.inventory.ItemFlag> itemFlags = new ArrayList<>();
-         
-         
-         for(ItemFlag itemFlag : flags) {
-            itemFlags.add(org.bukkit.inventory.ItemFlag.valueOf(itemFlag.name()));
-         }
-         
-         itemFlags.forEach(meta::addItemFlags);
+      for(ItemFlag itemFlag : flags) {
+         itemFlags.add(org.bukkit.inventory.ItemFlag.valueOf(itemFlag.name()));
       }
+      
+      itemFlags.forEach(meta::addItemFlags);
+      
       meta.setUnbreakable(unbreakable);
       itemStack.setItemMeta(meta);
       
